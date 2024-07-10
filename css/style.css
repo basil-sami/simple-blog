@@ -1,0 +1,47 @@
+body {
+    padding-top: 70px;
+    background-color: #f8f9fa;
+}
+
+.jumbotron {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+}
+
+.jumbotron p.lead {
+    font-size: 1.5rem;
+}
+
+.list-group-item {
+    font-size: 1.2rem;
+    border: none;
+    padding: 1rem;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #f8f9fa;
+    border-top: 1px solid #e7e7e7;
+}
+
+.form-horizontal .form-group {
+    margin-bottom: 15px;
+}
+
+.form-horizontal .form-group label {
+    text-align: left;
+}
+
+.form-horizontal .form-group .form-control {
+    width: 100%;
+}
+
+.form-horizontal .form-group .btn-primary {
+    margin-top: 10px;
+}

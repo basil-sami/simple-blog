@@ -1,0 +1,30 @@
+# Enable URL rewriting
+RewriteEngine on
+
+# If a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise forward it to index.php
+RewriteRule . index.php
+
+
+# Prevent access to hidden files and directories (starting with a dot)
+RedirectMatch 403 /\..*$
+
+# Redirect all requests to the index.php file
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.php [L]
+
+# Uncomment the following lines if you want to use the application in a subdirectory
+# RewriteBase /path/to/your/application/
+
+# Optionally, if you want to redirect the www version to non-www or vice versa
+# Uncomment the following lines to force www
+# RewriteCond %{HTTP_HOST} !^www\.
+# RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Uncomment the following lines to force non-www
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
